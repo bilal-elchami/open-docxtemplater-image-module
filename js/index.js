@@ -122,7 +122,7 @@ var ImageModule = function () {
 			if (!part.type === "placeholder" || part.module !== moduleName) {
 				return null;
 			}
-			var tagValue = options.scopeManager.getValue(part.value);
+			var tagValue = options.scopeManager.getValue(part.value, {part});
 			if (!tagValue) {
 				return { value: this.fileTypeConfig.tagTextXml };
 			}
